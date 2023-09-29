@@ -1,0 +1,82 @@
+body{
+    font-family: 'Poppins';font-size: 22px;
+    margin: 30px;
+    background-color: aliceblue;
+}
+
+hr{
+    width: 70%;
+}
+
+.quest{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+
+.content{
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.answer{
+    font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.answer button{
+    background-color: #d3d3d3;
+    width: 100px;
+    height: 40px;
+    font-size: large;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+}
+
+.answer button:hover{
+    background-color: grey;
+    
+}
+
+.answer button:active{
+    transform: scale(1.10);
+   
+}
+
+.answer2{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.answer2 input{
+    border: none;
+    height: 30px;
+    width: 50px;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+.submit {
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
+   }
+   
+.submit:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+   }
+   
+.submit:active {
+    transform: translate(0em, 0.2em);
+   }
