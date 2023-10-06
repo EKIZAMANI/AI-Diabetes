@@ -8,9 +8,6 @@ var seringInfeksi; //4
 var sakitKaki; //5
 var sakitKepala; //6
 var lambatSembuh; //7
-var jenisKelamin; //8 (yes=pria) (no=wanita)
-var umur; //9
-var lingkarPinggang; //10
 
 //insipidus
 var dehidrasi; //11
@@ -37,16 +34,24 @@ var sulitAktivitas; //25
 // Fungsi untuk mengatur jawaban dan menyimpannya dalam objek 'answers'.
 function setAnswer(questionNumber, answer) {
     answers[questionNumber] = answer;
+
+    if (answer === 'true') {
+        // Disable the "No" button
+        document.getElementById('noButton'+[questionNumber]).disabled = true;
+        document.getElementById('yesButton' + questionNumber).style.fontWeight = 'bold';
+        document.getElementById('yesButton' + questionNumber).style.border = '3px solid black';
+
+    } else {
+        document.getElementById('yesButton'+[questionNumber]).disabled = true;
+        document.getElementById('noButton' + questionNumber).style.fontWeight = 'bold';
+        document.getElementById('noButton' + questionNumber).style.border = '3px solid black';
+
+
+
+    }
 }
 
 // Fungsi untuk mengumpulkan jawaban dari input number (pertanyaan 13 dan 14).
-function collectNumberAnswers() {
-    var question13 = document.getElementById('9').value;
-    var question14 = document.getElementById('10').value;
-
-    answers['9'] = question13;
-    answers['10'] = question14;
-}
 
 // Fungsi untuk mengirimkan formulir.
 function submitForm() {
@@ -56,7 +61,6 @@ function submitForm() {
     hipertiroid = 0;
     hipotiroid = 0;
 
-    collectNumberAnswers();
 
     // Melakukan sesuatu dengan objek 'answers'.
     for (var questionNumber in answers) {
@@ -75,27 +79,24 @@ function submitForm() {
     sakitKaki = answers[5];
     sakitKepala = answers[6];
     lambatSembuh = answers[7];
-    jenisKelamin = answers[8];
-    umur = answers[9];
-    lingkarPinggang = answers[10];
 
-    dehidrasi = answers[11];
-    gangElektrolit = answers[12];
-    gangTidur = answers[13];
-    gangBeratBadan = answers[14];
-    sulitKonsen = answers[15];
+    dehidrasi = answers[8];
+    gangElektrolit = answers[9];
+    gangTidur = answers[10];
+    gangBeratBadan = answers[11];
+    sulitKonsen = answers[12];
 
-    seringkeringat = answers[16];
-    mudahKepanasan = answers[17];
-    tiroidMembengkak = answers[18];
-    mudahlelah = answers[19];
-    nafsumeningkat = answers[20];
+    seringkeringat = answers[13];
+    mudahKepanasan = answers[14];
+    tiroidMembengkak = answers[15];
+    mudahlelah = answers[16];
+    nafsumeningkat = answers[17];
 
-    nafsuMenurun = answers[21];
-    kulitKering = answers[22];
-    sensitifSuhuDingin = answers[23];
-    sembelit = answers[24];
-    sulitAktivitas = answers[25];
+    nafsuMenurun = answers[18];
+    kulitKering = answers[19];
+    sensitifSuhuDingin = answers[20];
+    sembelit = answers[21];
+    sulitAktivitas = answers[22];
 
     for (var i = 1; i <= 7; i++) {
         if(answers[i]) {
@@ -103,37 +104,26 @@ function submitForm() {
         }
     }
 
-    for (var i = 11; i <= 15; i++) {
+    for (var i = 8; i <= 12; i++) {
         if(answers[i]) {
             insipidus++;
         }
     }
 
-    for (var i = 16; i <= 20; i++) {
+    for (var i = 13; i <= 17; i++) {
         if(answers[i]) {
             hipertiroid++;
         }
     }
 
-    for (var i = 21; i <= 25; i++) {
+    for (var i = 18; i <= 22; i++) {
         if(answers[i]) {
             hipotiroid++;
         }
     }
 
-    console.log(melitus);
-    console.log(insipidus);
-    console.log(hipertiroid);
-    console.log(hipotiroid);
-
 }
 
-
-
-function testAlert() {
-    alert(riwayat);
-    alert(lingkarPinggang);
-}
 
 
 
