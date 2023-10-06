@@ -13,7 +13,7 @@
             </div>
             <div class="wrapper">
                 <div id="divMelitus" class="color chinese-black">
-                    Diabetes Mealitus
+                    Diabetes Melitus
                     <span class="hex" id="melitusStatus">Tidak Terdeteksi</span>
                 </div>
                 <div id="divInsipidus" class="color night-rider">
@@ -31,10 +31,18 @@
                 
                 
                 </div>
-                <div class="text">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus quae sunt natus, voluptatum quaerat, obcaecati eius facere optio iure nostrum quisquam voluptatem eaque autem asperiores velit fugit odit culpa a.</p>
-                    
+                <div id="peringatan" class="text" style="display: none;">
+                    <ul id="list" style="color: black;">
+                        <li id="melitus&insipidus" style="display: none;">
+                            Kasus melitus dan insipidus terdeteksi secara bersamaan sangat kecil kemungkinan, mohon konsultasi lebih lanjut ke dokter.
+                        </li>
+                        <br>
+                        <li id="hiper&hipo" style="display: none;">
+                            Kasus Hypertiroid dan hipotiroid terdeteksi secara bersamaan sangat tidak mungkin, kemungkinan terjadi kesalahan input.
+                        </li>
+                    </ul>
                 </div>
+                
                
             </div>
         </div>
@@ -100,6 +108,18 @@
         } else {
             hipotiroidStatusElement.textContent = 'Tidak Terdeteksi';
             document.getElementById('divHipo').className='color custom-blue'
+        }
+
+        if (melitus === '7' && insipidus === '5') {
+            document.getElementById('peringatan').style.display = 'block';
+            document.getElementById('melitus&insipidus').style.display = 'block';
+            
+        }
+
+        if (hipertiroid === '5' && hipotiroid === '5') {
+            document.getElementById('peringatan').style.display = 'block';
+            document.getElementById('hiper&hipo').style.display = 'block';
+
         }
     </script>
 </html>
