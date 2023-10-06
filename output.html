@@ -14,23 +14,75 @@
             <div class="wrapper">
                 <div class="color chinese-black">
                     Diabetes Mealitus
-                    <span class="hex">Tidak Terdeeteksi</span>
+                    <span class="hex" id="melitusStatus">Tidak Terdeteksi</span>
                 </div>
                 <div class="color night-rider">
                     Diabetes Insipidus
-                    <span class="hex">Tidak Terdeeteksi</span>
+                    <span class="hex" id="insipidusStatus">Tidak Terdeteksi</span>
                 </div>
                 <div class="color chinese-white">
-                    HyperTiroid
-                    <span class="hex">Tidak Terdeeteksi</span>
+                    HiperTiroid
+                    <span class="hex" id="HyperTiroidStatus">Tidak Terdeteksi</span>
                 </div>
                 <div class="color anti-flash-white">
                     HipoTiroid
-                    <span class="hex">Tidak Terdeeteksi</span>
+                    <span class="hex" id="hipotiroidStatus">Tidak Terdeteksi</span>
+                </div>
+                
                 </div>
 
                 <!-- <div class="border">common border radius <span>5px | 8px</span></div> -->
             </div>
         </div>
     </body>
+
+    <script>
+        // Get query parameters from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const melitus = urlParams.get('melitus');
+        const insipidus = urlParams.get('insipidus');
+        const hipertiroid = urlParams.get('hipertiroid');
+        const hipotiroid = urlParams.get('hipotiroid');
+
+        // Now you can use the values of melitus and insipidus in your output.html page as needed
+        console.log('melitus:', melitus);
+        console.log('insipidus:', insipidus);
+        console.log('hipertiroid:', hipertiroid);
+        console.log('hipotiroid:', hipotiroid);
+
+        const melitusStatusElement = document.getElementById('melitusStatus');
+
+        // Check the value of melitus
+        if (melitus === '7') { // Make sure to compare as a string since get() returns a string
+            melitusStatusElement.textContent = 'Terdeteksi';
+        } else {
+            melitusStatusElement.textContent = 'Tidak Terdeteksi';
+        }
+
+        // Define the elements
+        const insipidusStatusElement = document.getElementById('insipidusStatus');
+        const HyperTiroidStatusElement = document.getElementById('HyperTiroidStatus');
+        const hipotiroidStatusElement = document.getElementById('hipotiroidStatus');
+
+        // Update the text for Diabetes Insipidus
+        if (insipidus === '5') { // Make sure to compare as a string since get() returns a string
+            insipidusStatusElement.textContent = 'Terdeteksi';
+        } else {
+            insipidusStatusElement.textContent = 'Tidak Terdeteksi';
+        }
+
+        // Update the text for HiperTiroid
+        if (hipertiroid === '5') { // Make sure to compare as a string since get() returns a string
+            HyperTiroidStatusElement.textContent = 'Terdeteksi';
+        } else {
+            HyperTiroidStatusElement.textContent = 'Tidak Terdeteksi';
+        }
+
+        // Update the text for HipoTiroid
+        if (hipotiroid === '5') { // Make sure to compare as a string since get() returns a string
+            hipotiroidStatusElement.textContent = 'Terdeteksi';
+        } else {
+            hipotiroidStatusElement.textContent = 'Tidak Terdeteksi';
+        }
+    </script>
 </html>

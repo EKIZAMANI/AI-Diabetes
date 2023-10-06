@@ -120,6 +120,9 @@ function submitForm() {
         if(answers[i]) {
             hipotiroid++;
         }
+
+    window.location.href = 'output.html?melitus=' + melitus + '&insipidus=' + insipidus + '&hipertiroid=' + hipertiroid + '&hipotiroid=' + hipotiroid;
+
     }
 
 }
