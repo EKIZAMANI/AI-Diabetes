@@ -1,0 +1,339 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <link rel="stylesheet" href="style.css">
+    <body>
+        <!-- <form class="form" id="myForm"> -->
+
+        <!-- quest 1 -->
+        <div class="content">
+            <p class="quest">Apakah keluarga anda memiliki riwayat diabetes?
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('1', 'true')">Yes</button>
+                <button type="button" onclick="setAnswer('1', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 2 -->
+        <div class="content">
+            <p class="quest">Apakah jarang berolahraga? </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('2', 'true')">Yes</button>
+                <button type="button" onclick="setAnswer('2', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 3 -->
+        <div class="content">
+            <p class="quest">Apakah ibu anda mengidap diabetes saat
+                mengandung?
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('3', 'true')">Yes</button>
+                <button type="button" onclick="setAnswer('3', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 4 -->
+        <div class="content">
+            <p class="quest">Apakah anda Sering mengalami infeksi pada area
+                :
+                Kemaluan, Saluran kemih, kulit? </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('4', 'true')">Yes</button>
+                <button type="button" onclick="setAnswer('4', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 5 -->
+        <div class="content">
+            <p class="quest">Apakah anda mengalami rasa sakit, terbakar, dan
+                kebas di kaki? </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('5', 'true')">Yes</button>
+                <button type="button" onclick="setAnswer('5', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 6 -->
+        <div class="content">
+            <p class="quest">Apakah anda mengalami sakit kepala setelah
+                makan?
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('6', 'true')">Yes</button>
+                <button type="button" onclick="setAnswer('6', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 7 -->
+        <div class="content">
+            <p class="quest">Jika anda mengalami luka, Apakah luka tersebut
+                lambat sembuh? </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('7', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('7', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 8 -->
+        <div class="content">
+            <p class="quest">apa jenis kelamin anda </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('8', 'true')">Pria</button>
+                <button type="button"
+                    onclick="setAnswer('8', 'false')">Wanita</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 9 -->
+        <div class="content">
+            <p class="quest">Berapa umur anda? </p>
+            <div class="answer2">
+                <input type="number" id="9" min="0">
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 10 -->
+        <div class="content">
+            <p class="quest">Berapa panjang lingkar pinggang anda? (Cm) </p>
+            <div class="answer2">
+                <input type="number" id="10" min="0">
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 11 -->
+        <div class="content">
+            <p class="quest">Selalu merasa haus meski telah banyak minum.
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('11', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('11', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 12 -->
+        <div class="content">
+            <p class="quest">Apakah Anda Memiliki gangguan elektrolit.
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('12', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('12', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 13 -->
+        <div class="content">
+            <p class="quest">Apakah Anda Memiliki gangguan Tidur.
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('13', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('13', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 14 -->
+        <div class="content">
+            <p class="quest">Apakah Anda Memiliki gangguan Berat Badan.
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('14', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('14', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 15 -->
+        <div class="content">
+            <p class="quest">Apakah Anda Memiliki Kesulitan dalam
+                berkonsentrasi.
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('15', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('15', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 16 -->
+        <div class="content">
+            <p class="quest">Apakah Anda Sering Berkeringat.
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('16', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('16', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 17 -->
+        <div class="content">
+            <p class="quest">Apakah Anda Mudah Kepanasan.
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('17', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('17', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 18 -->
+        <div class="content">
+            <p class="quest">Apakah Kelenjar tiroid anda di bagian leher
+                membengkak.
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('18', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('18', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 19 -->
+        <div class="content">
+            <p class="quest">Apakah Anda mudah kelelahan.
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('19', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('19', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 20 -->
+        <div class="content">
+            <p class="quest">Apakah Nafsu makan anda meningkat namun berat badan
+                tidak kunjung bertambah.
+                .
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('20', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('20', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 21 -->
+        <div class="content">
+            <p class="quest">Apakah Berat badan anda meningkat tetapi nafsu
+                makan menurun.
+                .
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('21', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('21', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 20 -->
+        <div class="content">
+            <p class="quest">Apakah Anda memiliki kulit kering.
+                .
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('22', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('22', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <!-- quest 20 -->
+        <div class="content">
+            <p class="quest">Apakah anda Sensitif terhadap suhu dingin.
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('23', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('23', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <div class="content">
+            <p class="quest">Apakah anda mengalami sembelit saat buang air
+                besar.
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('24', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('24', 'false')">No</button>
+            </div>
+        </div>
+        <hr>
+
+        <div class="content">
+            <p class="quest">Apakah anda mengalami Kesulitan menjalani aktivitas
+                fisik.
+            </p>
+            <div class="answer">
+                <button type="button"
+                    onclick="setAnswer('25', 'true')">Yes</button>
+                <button type="button"
+                    onclick="setAnswer('25', 'false')">No</button>
+            </div>
+        </div>
+
+        <div class="submit">
+            <a href="output.html">
+                <input type="submit" value="Submit"
+                    onclick="submitForm()">
+            </a>
+        </div>
+
+        <!-- </form> -->
+        <script src="script.js"></script>
+    </body>
+</html>
