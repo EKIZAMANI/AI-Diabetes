@@ -12,6 +12,8 @@
     --white: #ffffff;
     --af-white: #f3f3f3;
     --ch-white: #e1e1e1;
+    --red: #FF6969;
+    --blue: #AED2FF;
     font-family: Helvetica, sans-serif;
   }
   
@@ -84,6 +86,16 @@
   .chinese-black {
     background: var(--eer-black);
     color: var(--ch-white);
+  }
+
+  .custom-red {
+    background: var(--red);
+    color: var(--ch-black);
+  }
+
+  .custom-blue {
+    background: var(--blue);
+    color: var(--ch-black);
   }
   
   .night-rider {
