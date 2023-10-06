@@ -120,3 +120,12 @@
     padding: 2px 4px;
     background-color: var(--night-rider);
   }
+
+  .text{
+    margin-top: 270px;
+    padding: 20px;
+    width: 500;
+    border-radius: 20px;
+    background-color: #FD8A8A;
+    
+  }
