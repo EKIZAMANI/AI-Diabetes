@@ -1,12 +1,114 @@
-body{
+:root {
+    --bg-page: #F8F6F4;
+    --bg-page2: #E3F4F4;
+    --bg-nav: #D2E9E9;
+    --button: #C4DFDF;
+    
+  }
+
+  body{
     font-family: 'Poppins';font-size: 22px;
-    margin: 30px;
-    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+    max-height: 500px;
 }
+
+#particles-js{
+    height: 100%;
+    background-color: var(--bg-page2)
+}
+
+
+
 
 hr{
     width: 70%;
 }
+
+.homepage {
+    flex-direction: column;
+    align-items:center;
+}
+
+
+
+nav ul {
+    padding: 10px;
+    padding-left: 20px;
+    list-style-type: none;
+    display: flex;
+    background-color: var(--bg-nav);
+    justify-content: start; 
+    gap: 900px;  
+}
+
+nav li{
+    font-weight: bold;
+}
+
+nav button{
+    background-color: var(--button); 
+    width: 150px;
+    height: 40px;
+    font-size: large;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none; 
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 0;
+}
+.main p{
+    padding-top: 0;
+    text-align: center;
+    width: 60%;
+}
+
+.main button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff5252;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+  }
+  
+  .main button:hover {
+    background-color: #fff;
+    color: #ff5252;
+    border: 2px solid #ff5252;
+    box-shadow: 5px 5px 0px #ff5252;
+  }
+  
+  .main button:active {
+    background-color: #fcf414;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+
+.main img{
+    
+    width: 80px;
+    padding: 30px;
+    background-color: var(--button);
+    border-radius: 200px;
+    
+}
+
+
+
 
 .quest{
     display: flex;
@@ -29,7 +131,7 @@ hr{
 }
 
 .answer button{
-    background-color: #d3d3d3;
+    background-color: var(--button);
     width: 100px;
     height: 40px;
     font-size: large;
@@ -45,6 +147,7 @@ hr{
 
 .answer button:active{
     transform: scale(1.10);
+    background-color: grey;
    
 }
 
@@ -54,6 +157,8 @@ hr{
     
 }
 
+
+
 .answer2 input{
     border: none;
     height: 30px;
@@ -62,7 +167,15 @@ hr{
     border-radius: 10px;
 }
 
-.submit {
+.submit{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.submit input {
+    width: 150;
+    height: 50;
     font-size: 17px;
     padding: 0.5em 2em;
     border: transparent;
@@ -72,11 +185,11 @@ hr{
     border-radius: 4px;
    }
    
-.submit:hover {
+.submit input:hover {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
    }
    
-.submit:active {
+.submit input:active {
     transform: translate(0em, 0.2em);
    }
