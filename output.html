@@ -12,19 +12,19 @@
                 <p class="desc">anda kemungkinan mengidap</p>
             </div>
             <div class="wrapper">
-                <div class="color chinese-black">
+                <div id="divMelitus" class="color chinese-black">
                     Diabetes Mealitus
                     <span class="hex" id="melitusStatus">Tidak Terdeteksi</span>
                 </div>
-                <div class="color night-rider">
+                <div id="divInsipidus" class="color night-rider">
                     Diabetes Insipidus
                     <span class="hex" id="insipidusStatus">Tidak Terdeteksi</span>
                 </div>
-                <div class="color chinese-white">
+                <div id="divHiper" class="color chinese-white">
                     HiperTiroid
                     <span class="hex" id="HyperTiroidStatus">Tidak Terdeteksi</span>
                 </div>
-                <div class="color anti-flash-white">
+                <div id="divHipo" class="color anti-flash-white">
                     HipoTiroid
                     <span class="hex" id="hipotiroidStatus">Tidak Terdeteksi</span>
                 </div>
@@ -55,8 +55,10 @@
         // Check the value of melitus
         if (melitus === '7') { // Make sure to compare as a string since get() returns a string
             melitusStatusElement.textContent = 'Terdeteksi';
+            document.getElementById('divMelitus').className='color custom-red'
         } else {
             melitusStatusElement.textContent = 'Tidak Terdeteksi';
+            document.getElementById('divMelitus').className='color custom-blue'
         }
 
         // Define the elements
@@ -67,22 +69,31 @@
         // Update the text for Diabetes Insipidus
         if (insipidus === '5') { // Make sure to compare as a string since get() returns a string
             insipidusStatusElement.textContent = 'Terdeteksi';
+            document.getElementById('divInsipidus').className='color custom-red'
+
         } else {
             insipidusStatusElement.textContent = 'Tidak Terdeteksi';
+            document.getElementById('divInsipidus').className='color custom-blue'
+
         }
 
         // Update the text for HiperTiroid
         if (hipertiroid === '5') { // Make sure to compare as a string since get() returns a string
             HyperTiroidStatusElement.textContent = 'Terdeteksi';
+            document.getElementById('divHiper').className='color custom-red'
         } else {
             HyperTiroidStatusElement.textContent = 'Tidak Terdeteksi';
+            document.getElementById('divHiper').className='color custom-blue'
+
         }
 
         // Update the text for HipoTiroid
         if (hipotiroid === '5') { // Make sure to compare as a string since get() returns a string
             hipotiroidStatusElement.textContent = 'Terdeteksi';
+            document.getElementById('divHipo').className='color custom-red'
         } else {
             hipotiroidStatusElement.textContent = 'Tidak Terdeteksi';
+            document.getElementById('divHipo').className='color custom-blue'
         }
     </script>
 </html>
